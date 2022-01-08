@@ -21,29 +21,6 @@ const server = new ApolloServer({
 //integrate Apollo server with the Express application as middleware
 server.applyMiddleware({ app });
 
-// ********* setUp for Apollo V3 + *******************//
-// const startServer = async () => {
-//   // create a new Apollo server and pass in the schema data
-//   const server = new ApolloServer({
-//     typeDefs,
-//     resolvers,
-//     context: authMiddleware,
-//   });
-
-//   // start the Apollo server
-
-//   await server.strart();
-
-//   //integrate Apollo server with the Express application as middleware
-//   server.applyMiddleware({ app });
-
-//   // log where you can go to test GQL API
-//   console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
-// };
-// // Initialize the Apollo server
-// startServer();
-// ****************************************************************************** //
-
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
